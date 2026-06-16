@@ -1,0 +1,11 @@
+__pycache__/ 
+*.pyc 
+*.pyo 
+*.pyd 
+.env 
+outputs/candidate_embeddings.npy 
+outputs/final_rankings.csv 
+outputs/final_rankings.json 
+venv/ 
+.env/ 
+.DS_Store
