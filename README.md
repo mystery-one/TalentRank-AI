@@ -127,7 +127,8 @@ to create an end-to-end AI recruitment intelligence pipeline.
 
 ## Architecture Diagram
 
-![System Architecture](assets/architecture_diagram.png)
+![System Architecture]
+(assets/architecture_diagram.png)
 
 ---
 
@@ -264,19 +265,22 @@ Example generated files:
 
 ## Candidate Ranking Output
 
-![Ranking Output](assets/ranking_output1.png)
+![Ranking Output]
+(assets/ranking_output1.png)
 
 ---
 
 ## Additional Ranking Results
 
-![Additional Ranking Output](assets/ranking_output2.png)
+![Additional Ranking Output]
+(assets/ranking_output2.png)
 
 ---
 
 ## Terminal Execution
 
-![Terminal Execution](assets/terminal_execution.png)
+![Terminal Execution]
+(assets/terminal_execution.png)
 
 ---
 
