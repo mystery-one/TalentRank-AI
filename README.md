@@ -128,7 +128,9 @@ to create an end-to-end AI recruitment intelligence pipeline.
 ## Architecture Diagram
 
 ![System Architecture]
-(assets/architecture_diagram.png)
+
+<img width="700" height="700" alt="architecture_diagram" src="https://github.com/user-attachments/assets/0b3dd49f-cb62-4066-882e-5e6fd8ca8bfe" />
+
 
 ---
 
