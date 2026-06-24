@@ -103,7 +103,7 @@ This improves recruiter trust and transparency in candidate evaluation.
 # Project Structure
 
 ```text
-ai-recruiter-ranking-system/
+TalentRank-AI/
 │
 ├── core/                   # Ranking and search modules
 ├── dataset/                # Candidate dataset (not uploaded)
@@ -215,20 +215,23 @@ Example generated files:
 # Screenshots
 
 ## Candidate Ranking Output
+<img width="1915" height="991" alt="ranking_output1 png" src="https://github.com/user-attachments/assets/cbfe99f3-842c-4d6e-960c-01fd534b08cb" />
 
-(Add Screenshot Here)
+<img width="1912" height="992" alt="ranking_output2 png" src="https://github.com/user-attachments/assets/660f9b54-4ea8-413c-90b0-c4c30dfeb5c4" />
+
 
 ---
 
 ## Terminal Execution
 
-(Add Screenshot Here)
+
 
 ---
 
 ## System Architecture
 
-(Add Architecture Diagram Here)
+<img width="1564" height="692" alt="architecture_diagram" src="https://github.com/user-attachments/assets/9f3377d8-b358-4303-a367-676f082c27a9" />
+
 
 ---
 
