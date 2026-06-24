@@ -1,104 +1,102 @@
-# AI Recruiter Ranking System
+# TalentRank AI
 
-## Production-Style AI Hiring Assistant
+### Semantic Recruitment Intelligence System
 
-An AI-powered recruiter intelligence system designed to help recruiters identify high-quality candidates using:
+An AI-powered recruitment ranking system that intelligently matches candidates to job descriptions using semantic understanding, vector embeddings, FAISS retrieval, and hybrid weighted scoring.
 
-* Semantic Search
-* Vector Embeddings
-* Hybrid Scoring
-* Explainable AI
-* Contextual Candidate Ranking
-
-This system goes beyond keyword matching and evaluates candidates holistically using skills, experience, projects, behavioral signals, and semantic relevance.
+Unlike traditional ATS systems that rely only on keyword matching, TalentRank AI evaluates contextual relevance, transferable skills, profile quality, experience alignment, and semantic similarity to generate recruiter-trustworthy candidate rankings.
 
 ---
 
 # Problem Statement
 
-Traditional ATS (Applicant Tracking Systems):
+Traditional Applicant Tracking Systems (ATS) often fail to identify high-quality candidates because they rely heavily on exact keyword matching.
 
-* Rely heavily on keyword matching
-* Miss transferable skills
-* Ignore contextual relevance
-* Cannot understand semantic meaning
-* Produce low-trust rankings
+This leads to:
 
-Example:
+* Missing qualified candidates
+* Poor contextual understanding
+* Weak candidate-job alignment
+* Increased recruiter screening time
+* Low trust in automated shortlisting
 
-A candidate with:
-
-* Computer Vision
-* PyTorch
-* MLOps
-
-may still be highly relevant for an AI Engineer role even without exact keyword overlap.
-
-Traditional systems fail in such cases.
-
----
-
-# Proposed Solution
-
-This project builds a production-style AI recruiter system that:
-
-✅ Understands job descriptions semantically
-✅ Evaluates candidates holistically
-✅ Uses vector embeddings + semantic search
-✅ Applies hybrid weighted scoring
-✅ Produces explainable recruiter-friendly rankings
+TalentRank AI addresses these limitations using semantic search and explainable AI-driven candidate ranking.
 
 ---
 
 # Key Features
 
-* Semantic candidate matching
-* Vector embeddings using SentenceTransformers
-* FAISS similarity search
-* Hybrid scoring engine
-* Explainable AI ranking
-* Recruiter-friendly outputs
-* Modular scalable architecture
-* Embedding caching
-* Production-style folder structure
+* Semantic candidate retrieval using Sentence Transformers
+* FAISS-based scalable vector similarity search
+* Hybrid weighted candidate ranking
+* Explainable AI ranking insights
+* Candidate profile quality analysis
+* Context-aware job description understanding
+* Fast retrieval across large candidate datasets
+* CSV and JSON ranking export support
 
 ---
 
-# Tech Stack
+# System Workflow
 
-| Component         | Technology            |
-| ----------------- | --------------------- |
-| Language          | Python                |
-| Embeddings        | Sentence Transformers |
-| Vector Search     | FAISS                 |
-| Data Processing   | Pandas                |
-| ML Utilities      | NumPy                 |
-| Progress Tracking | tqdm                  |
-| Document Parsing  | python-docx           |
+1. Job Description is provided as input
+2. Candidate profiles are processed and cleaned
+3. Semantic embeddings are generated
+4. FAISS retrieves contextually relevant candidates
+5. Multiple candidate signals are evaluated
+6. Hybrid weighted scoring calculates final rankings
+7. Explainability layer generates ranking insights
+8. Ranked outputs are exported
 
 ---
 
-# System Architecture
+# Hybrid Ranking Methodology
 
-```text
-Job Description
-        ↓
-JD Semantic Parsing
-        ↓
-Embedding Generation
-        ↓
-FAISS Vector Search
-        ↓
-Top Semantic Matches
-        ↓
-Hybrid Scoring Engine
-        ↓
-Behavioral Evaluation
-        ↓
-Explainability Layer
-        ↓
-Final Ranked Candidates
+The final candidate score is generated using a hybrid weighted scoring approach:
+
+```python
+Final Score =
+0.50 × Semantic Similarity +
+0.30 × Experience Relevance +
+0.20 × Profile Quality Score
 ```
+
+### Signals Considered
+
+* Semantic Similarity
+* Experience Relevance
+* Skills Alignment
+* Project Relevance
+* Profile Completeness
+* Contextual Matching
+
+---
+
+# Explainability Layer
+
+The system generates explainable ranking insights including:
+
+* Match Scores
+* Confidence Levels
+* Candidate Strengths
+* Ranking Reasons
+* Skill Alignment Insights
+
+This improves recruiter trust and transparency in candidate evaluation.
+
+---
+
+# Technologies Used
+
+| Technology            | Purpose                       |
+| --------------------- | ----------------------------- |
+| Python                | Core backend development      |
+| Sentence Transformers | Semantic embedding generation |
+| FAISS                 | Vector similarity search      |
+| Pandas                | Data processing               |
+| NumPy                 | Numerical operations          |
+| tqdm                  | Progress tracking             |
+| python-docx           | Job description parsing       |
 
 ---
 
@@ -107,55 +105,30 @@ Final Ranked Candidates
 ```text
 ai-recruiter-ranking-system/
 │
-├── app.py
-├── config.py
+├── core/                   # Ranking and search modules
+├── dataset/                # Candidate dataset (not uploaded)
+├── outputs/                # Generated outputs and embeddings
+├── utils/                  # Utility functions
+├── app.py                  # Main execution file
 ├── requirements.txt
 ├── README.md
-├── .gitignore
-│
-├── core/
-│   ├── embeddings.py
-│   ├── ranking_engine.py
-│   ├── semantic_search.py
-│   ├── candidate_loader.py
-│   ├── jd_parser.py
-│   ├── hybrid_scoring.py
-│   ├── explainability.py
-│   └── behavioral_engine.py
-│
-├── dataset/
-│   ├── job_description.docx
-│   ├── sample_submission.csv
-│   ├── validate_submission.py
-│   └── redrob_signals_doc.docx
-│
-├── outputs/
-│   └── .gitkeep
-│
-└── utils/
+└── .gitignore
 ```
 
 ---
 
-# Installation
+# Setup Instructions
 
-## Step 1 — Clone Repository
+## Clone Repository
 
 ```bash
 git clone https://github.com/mystery-one/ai-recruiter-ranking-system.git
-```
-
----
-
-## Step 2 — Navigate to Project
-
-```bash
 cd ai-recruiter-ranking-system
 ```
 
 ---
 
-## Step 3 — Create Virtual Environment
+## Create Virtual Environment
 
 ```bash
 python -m venv venv
@@ -163,7 +136,7 @@ python -m venv venv
 
 ---
 
-## Step 4 — Activate Virtual Environment
+## Activate Environment
 
 ### Windows
 
@@ -171,7 +144,7 @@ python -m venv venv
 venv\Scripts\activate
 ```
 
-### Mac/Linux
+### Linux / Mac
 
 ```bash
 source venv/bin/activate
@@ -179,7 +152,7 @@ source venv/bin/activate
 
 ---
 
-## Step 5 — Install Dependencies
+## Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -187,9 +160,25 @@ pip install -r requirements.txt
 
 ---
 
-# Running the Project
+# Dataset Setup
 
-## Run Main Pipeline
+Due to GitHub file size limitations, the dataset is not included in this repository.
+
+Place the dataset file:
+
+```text
+candidates.jsonl
+```
+
+inside:
+
+```text
+dataset/
+```
+
+---
+
+# Run Application
 
 ```bash
 python app.py
@@ -197,196 +186,107 @@ python app.py
 
 ---
 
-# Expected Workflow
-
-```text
-Loading candidates...
-Reading job description...
-Generating embeddings...
-Building FAISS index...
-Running semantic retrieval...
-Ranking candidates...
-Generating explainability...
-Saving outputs...
-```
-
----
-
 # Output Files
 
-The system generates recruiter-friendly outputs:
+Generated ranking outputs will automatically be saved inside:
 
 ```text
 outputs/
-│
-├── final_rankings.csv
-└── final_rankings.json
 ```
 
----
+Example generated files:
 
-# Sample Output Format
-
-| Rank | Candidate   | Final Score | Confidence |
-| ---- | ----------- | ----------- | ---------- |
-| 1    | Candidate A | 92.4        | High       |
-| 2    | Candidate B | 89.7        | High       |
-| 3    | Candidate C | 86.3        | Medium     |
+* final_rankings.csv
+* final_rankings.json
+* candidate_embeddings.npy
 
 ---
 
-# Hybrid Scoring Logic
+# Sample Ranking Output
 
-Final candidate ranking is based on:
-
-| Component            | Weight |
-| -------------------- | ------ |
-| Semantic Similarity  | 60%    |
-| Experience Relevance | 25%    |
-| Behavioral Score     | 15%    |
-
----
-
-# Semantic Retrieval
-
-The system uses:
-
-* SentenceTransformer embeddings
-* Dense vector representation
-* FAISS nearest-neighbor retrieval
-
-This allows semantic matching instead of exact keyword overlap.
-
----
-
-# Explainability Layer
-
-Each ranked candidate includes:
-
-* Final Score
-* Semantic Score
-* Experience Score
-* Behavioral Score
-* Strengths
-* Confidence Level
-* Ranking Reasoning
-
-Example:
-
-```json
-{
-  "rank": 1,
-  "final_score": 92.1,
-  "confidence": "High",
-  "strengths": [
-    "Strong AI/ML alignment",
-    "Relevant project experience",
-    "High semantic similarity"
-  ]
-}
-```
-
----
-
-# Optimization Features
-
-## Embedding Caching
-
-Embeddings are cached locally to reduce repeated computation.
-
-## Batch Embedding Generation
-
-Embeddings are generated in batches for faster processing.
-
-## Scalable Retrieval
-
-FAISS enables fast vector similarity search for large candidate datasets.
-
----
-
-# Evaluation Metrics
-
-The system can be evaluated using:
-
-* Precision@K
-* Recall@K
-* Recruiter Acceptance Rate
-* Ranking Consistency
-* Semantic Relevance Accuracy
+| Rank | Candidate ID | Final Score | Semantic Score | Experience Score | Profile Quality Score |
+| ---- | ------------ | ----------- | -------------- | ---------------- | --------------------- |
+| 1    | CAND_0000112 | 76.50       | 98.49          | 50               | 32                    |
+| 2    | CAND_0000723 | 76.50       | 98.44          | 50               | 32                    |
+| 3    | CAND_0000343 | 76.15       | 98.45          | 50               | 30                    |
 
 ---
 
 # Screenshots
 
-## Architecture Diagram
+## Candidate Ranking Output
 
-> Add architecture screenshot here
+(Add Screenshot Here)
 
 ---
 
 ## Terminal Execution
 
-> Add terminal execution screenshot here
+(Add Screenshot Here)
 
 ---
 
-## Ranked Output CSV
+## System Architecture
 
-> Add ranked output screenshot here
-
----
-
-## GitHub Repository
-
-> Add GitHub repository screenshot here
+(Add Architecture Diagram Here)
 
 ---
 
-# Current Limitations
+# Traditional ATS vs TalentRank AI
 
-* No true LLM reasoning yet
-* Limited career trajectory analysis
-* Limited project-depth understanding
-* No recruiter dashboard yet
-* No API deployment yet
+| Traditional ATS             | TalentRank AI                |
+| --------------------------- | ---------------------------- |
+| Keyword matching            | Semantic understanding       |
+| Limited contextual analysis | Context-aware ranking        |
+| Misses transferable skills  | Detects semantic relevance   |
+| Static filtering            | Hybrid intelligent scoring   |
+| Low explainability          | Explainable ranking insights |
+
+---
+
+# Challenges Addressed
+
+* Eliminates dependency on exact keyword matching
+* Detects transferable skills through semantic understanding
+* Improves recruiter shortlist quality
+* Reduces irrelevant candidate retrieval
+* Handles large-scale candidate retrieval efficiently
+* Generates explainable candidate rankings
 
 ---
 
 # Future Improvements
 
-* GPT/Claude-powered reranking
-* Multi-role candidate matching
-* Skill graph intelligence
-* Recruiter dashboard
-* Candidate clustering
-* Interview question generation
-* Bias mitigation layer
-* Resume summarization
-* API deployment with FastAPI
+* Recruiter feedback learning loop
+* Adaptive ranking optimization
+* Resume parsing automation
+* LLM-powered candidate summaries
+* Bias-aware ranking analysis
+* Real-time recruiter dashboard
 
 ---
 
-# Why This System Matters
+# Submission Assets
 
-This system improves:
-
-✅ Recruiter efficiency
-✅ Hiring quality
-✅ Semantic candidate understanding
-✅ Explainable AI hiring
-✅ Faster candidate screening
+* GitHub Repository
+* PPT / PDF Documentation
+* Ranked Candidate Output File
+* System Architecture Diagrams
+* Demo Screenshots
 
 ---
 
-# Business Impact
+# Important Notes
 
-| Metric                     | Improvement           |
-| -------------------------- | --------------------- |
-| Resume Screening Time      | Reduced significantly |
-| Candidate Quality          | Improved              |
-| Recruiter Trust            | Increased             |
-| Keyword Dependency         | Reduced               |
-| Semantic Matching Accuracy | Improved              |
+* Dataset files are excluded due to GitHub file size restrictions
+* Generated outputs are ignored using `.gitignore`
+* The system is designed for scalable semantic candidate retrieval
+
+---
+
+# License
+
+This project is intended for educational and hackathon purposes.
 
 ---
 
@@ -394,8 +294,4 @@ This system improves:
 
 Prakruthi D Koppad
 
----
-
-# License
-
-This project is intended for educational and challenge submission purposes.
+AI / ML Engineer | Semantic Search | Recruitment Intelligence Systems
