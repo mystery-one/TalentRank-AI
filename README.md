@@ -127,9 +127,7 @@ to create an end-to-end AI recruitment intelligence pipeline.
 
 ## Architecture Diagram
 
-![System Architecture]
-
-<img width="700" height="400" alt="architecture_diagram" src="https://github.com/user-attachments/assets/0b3dd49f-cb62-4066-882e-5e6fd8ca8bfe" />
+<img width="600" height="400" alt="architecture_diagram" src="https://github.com/user-attachments/assets/0b3dd49f-cb62-4066-882e-5e6fd8ca8bfe" />
 
 
 ---
@@ -267,22 +265,24 @@ Example generated files:
 
 ## Candidate Ranking Output
 
-![Ranking Output]
-(assets/ranking_output1.png)
+
+<img width="600" height="400" alt="ranking_output1 png" src="https://github.com/user-attachments/assets/8e2763fb-a163-475c-9863-43f53682a80c" />
+
 
 ---
 
 ## Additional Ranking Results
 
-![Additional Ranking Output]
-(assets/ranking_output2.png)
+
+<img width="600" height="400" alt="ranking_output2 png" src="https://github.com/user-attachments/assets/c7aaf075-44cc-42e9-b80d-e641c612c1ea" />
 
 ---
 
 ## Terminal Execution
 
-![Terminal Execution]
-(assets/terminal_execution.png)
+
+<img width="600" height="400" alt="terminal_execution png" src="https://github.com/user-attachments/assets/afa185e1-a515-40bb-8456-de33e894313d" />
+
 
 ---
 
