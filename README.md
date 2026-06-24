@@ -224,6 +224,7 @@ Example generated files:
 
 ## Terminal Execution
 
+<img width="1727" height="952" alt="Screenshot 2026-06-24 125509" src="https://github.com/user-attachments/assets/a0362da6-464d-4c81-8923-155136b9577c" />
 
 
 ---
