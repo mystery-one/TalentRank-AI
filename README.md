@@ -2,9 +2,19 @@
 
 ### Semantic Recruitment Intelligence System
 
-An AI-powered recruitment ranking system that intelligently matches candidates to job descriptions using semantic understanding, vector embeddings, FAISS retrieval, and hybrid weighted scoring.
+AI-powered semantic candidate ranking system designed to improve recruiter decision-making beyond traditional keyword-based ATS filtering.
 
-Unlike traditional ATS systems that rely only on keyword matching, TalentRank AI evaluates contextual relevance, transferable skills, profile quality, experience alignment, and semantic similarity to generate recruiter-trustworthy candidate rankings.
+TalentRank AI intelligently matches candidates to job descriptions using semantic understanding, vector embeddings, FAISS retrieval, explainable AI, and hybrid weighted scoring.
+
+Unlike traditional ATS systems that rely only on exact keyword matching, TalentRank AI evaluates:
+
+* contextual relevance
+* transferable skills
+* profile quality
+* experience alignment
+* semantic similarity
+
+to generate recruiter-trustworthy candidate rankings.
 
 ---
 
@@ -32,15 +42,33 @@ TalentRank AI addresses these limitations using semantic search and explainable 
 * Explainable AI ranking insights
 * Candidate profile quality analysis
 * Context-aware job description understanding
-* Fast retrieval across large candidate datasets
+* Transferable skill detection
+* Scalable retrieval across large candidate datasets
 * CSV and JSON ranking export support
+
+---
+
+# Why Semantic Search Matters
+
+Traditional ATS systems often reject strong candidates when exact keywords are missing.
+
+TalentRank AI uses semantic understanding to identify:
+
+* transferable skills
+* contextual relevance
+* role similarity
+* meaningful candidate-job alignment
+
+even when wording differs between resumes and job descriptions.
+
+This enables smarter and more recruiter-aligned candidate shortlisting.
 
 ---
 
 # System Workflow
 
 1. Job Description is provided as input
-2. Candidate profiles are processed and cleaned
+2. Candidate profiles are cleaned and processed
 3. Semantic embeddings are generated
 4. FAISS retrieves contextually relevant candidates
 5. Multiple candidate signals are evaluated
@@ -54,7 +82,7 @@ TalentRank AI addresses these limitations using semantic search and explainable 
 
 The final candidate score is generated using a hybrid weighted scoring approach:
 
-```python
+```text
 Final Score =
 0.50 × Semantic Similarity +
 0.30 × Experience Relevance +
@@ -86,6 +114,23 @@ This improves recruiter trust and transparency in candidate evaluation.
 
 ---
 
+# System Architecture
+
+The system architecture combines:
+
+* semantic embedding generation
+* FAISS-based vector retrieval
+* hybrid weighted scoring
+* explainability modules
+
+to create an end-to-end AI recruitment intelligence pipeline.
+
+## Architecture Diagram
+
+![System Architecture](assets/architecture_diagram.png)
+
+---
+
 # Technologies Used
 
 | Technology            | Purpose                       |
@@ -105,14 +150,17 @@ This improves recruiter trust and transparency in candidate evaluation.
 ```text
 TalentRank-AI/
 │
-├── core/                   # Ranking and search modules
-├── dataset/                # Candidate dataset (not uploaded)
-├── outputs/                # Generated outputs and embeddings
-├── utils/                  # Utility functions
-├── app.py                  # Main execution file
+├── core/                         # Ranking and semantic search modules
+├── dataset/                      # Candidate dataset (not uploaded)
+├── outputs/                      # Generated outputs and embeddings
+├── utils/                        # Utility functions
+├── assets/                       # Screenshots and architecture diagrams
+│
+├── app.py                        # Main execution file
 ├── requirements.txt
 ├── README.md
-└── .gitignore
+├── .gitignore
+└── candidate_profiles_sample.json
 ```
 
 ---
@@ -188,7 +236,7 @@ python app.py
 
 # Output Files
 
-Generated ranking outputs will automatically be saved inside:
+Generated ranking outputs are automatically stored inside:
 
 ```text
 outputs/
@@ -215,24 +263,20 @@ Example generated files:
 # Screenshots
 
 ## Candidate Ranking Output
-<img width="1915" height="991" alt="ranking_output1 png" src="https://github.com/user-attachments/assets/cbfe99f3-842c-4d6e-960c-01fd534b08cb" />
 
-<img width="1912" height="992" alt="ranking_output2 png" src="https://github.com/user-attachments/assets/660f9b54-4ea8-413c-90b0-c4c30dfeb5c4" />
+![Ranking Output](assets/ranking_output1.png)
 
+---
+
+## Additional Ranking Results
+
+![Additional Ranking Output](assets/ranking_output2.png)
 
 ---
 
 ## Terminal Execution
 
-<img width="1727" height="952" alt="Screenshot 2026-06-24 125509" src="https://github.com/user-attachments/assets/a0362da6-464d-4c81-8923-155136b9577c" />
-
-
----
-
-## System Architecture
-
-<img width="1564" height="692" alt="architecture_diagram" src="https://github.com/user-attachments/assets/9f3377d8-b358-4303-a367-676f082c27a9" />
-
+![Terminal Execution](assets/terminal_execution.png)
 
 ---
 
@@ -254,7 +298,7 @@ Example generated files:
 * Detects transferable skills through semantic understanding
 * Improves recruiter shortlist quality
 * Reduces irrelevant candidate retrieval
-* Handles large-scale candidate retrieval efficiently
+* Handles scalable candidate retrieval efficiently
 * Generates explainable candidate rankings
 
 ---
@@ -266,7 +310,7 @@ Example generated files:
 * Resume parsing automation
 * LLM-powered candidate summaries
 * Bias-aware ranking analysis
-* Real-time recruiter dashboard
+* Interactive recruiter analytics interface
 
 ---
 
@@ -275,7 +319,7 @@ Example generated files:
 * GitHub Repository
 * PPT / PDF Documentation
 * Ranked Candidate Output File
-* System Architecture Diagrams
+* System Architecture Diagram
 * Demo Screenshots
 
 ---
@@ -285,6 +329,7 @@ Example generated files:
 * Dataset files are excluded due to GitHub file size restrictions
 * Generated outputs are ignored using `.gitignore`
 * The system is designed for scalable semantic candidate retrieval
+* This project is developed as a hackathon prototype for AI-powered recruitment intelligence
 
 ---
 
@@ -296,6 +341,7 @@ This project is intended for educational and hackathon purposes.
 
 # Author
 
-Prakruthi D Koppad
+## Prakruthi D Koppad
 
-AI / ML Engineer | Semantic Search | Recruitment Intelligence Systems
+AI / ML Engineer
+Semantic Search | Recruitment Intelligence Systems
