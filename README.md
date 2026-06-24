@@ -122,8 +122,8 @@ ai-recruiter-ranking-system/
 ## Clone Repository
 
 ```bash
-git clone https://github.com/mystery-one/ai-recruiter-ranking-system.git
-cd ai-recruiter-ranking-system
+git clone https://github.com/mystery-one/TalentRank-AI.git
+cd TalentRank-AI
 ```
 
 ---
